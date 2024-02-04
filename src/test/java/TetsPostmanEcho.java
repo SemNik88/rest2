@@ -9,7 +9,7 @@ public class TetsPostmanEcho {
         // Given - When - Then
         given()
                 .baseUri("https://postman-echo.com")
-                .body("netologyNEW")
+                .body("netology")
                 .when()
                 .post("/post")
                 .then()
