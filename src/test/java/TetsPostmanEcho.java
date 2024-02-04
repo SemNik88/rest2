@@ -4,18 +4,19 @@ import static org.hamcrest.Matchers.equalTo;
 
 public class TetsPostmanEcho {
     @Test
-    void shouldReturnBody() {
-        // Given - When - Then
+    void shouldPost() {
 
+        // Given - When - Then
         given()
                 .baseUri("https://postman-echo.com")
-                .body("name")
-
+                .body("netology")
                 .when()
                 .post("/post")
                 .then()
+                .log()
+                .body()
                 .statusCode(200)
-                .body("data", equalTo("name"))
-        ;
+                .body("data", equalTo("netology"))
+                ;
     }
 }
